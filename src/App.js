@@ -1,23 +1,28 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { Routes, Route, useLocation } from "react-router-dom";
+import React, { useState, useRef } from "react";
+
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
-import Landing2 from './components/Landing2';
+import Landing3 from './components/Landing3';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
+
+
 function App() {
+
 return (
-    <Router basename="/questions-signals">
     <div className="App">
-        <Routes>
-        <Route path="/" element={<Landing2 />} />
-        {/* Add more routes here */}
-        </Routes>
+            
+        <Landing3 />
         <ScrollToTopButton />
+
+
+        
     </div>
-    </Router>
 );
 }
 
